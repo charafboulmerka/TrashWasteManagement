@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://iili.io/3Ee7qmv.png" alt="WasteExpress Logo" width="300"/>
+</p>
+
 # ♻️ WasteExpress
 
 **WasteExpress** is a mobile prototype app built to simplify the process of waste resale and recycling connections. It allows individuals and small companies with various types of waste to publish offers for potential buyers who are interested in repurposing or recycling those materials.
