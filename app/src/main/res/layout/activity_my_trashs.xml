@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    tools:context=".MyDreams">
+
+    <include layout="@layout/header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/pickedColorOne"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/mydream_enprogess_upperline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pickedColorOne"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mydream_enprogress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pickedColorOne"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:onClick="clickMyDream"
+                android:text="قيد التفسير"/>
+
+            <TextView
+                android:id="@+id/mydream_enprogess_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/mydream_done_upperline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pickedColorOne"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mydream_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/pickedColorOne"
+                android:onClick="clickMyDream"
+                android:text="تم التفسير"/>
+
+            <TextView
+                android:id="@+id/mydream_done_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pickedColorOne"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/mydream_all_upperline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pickedColorOne"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mydream_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/pickedColorOne"
+                android:onClick="clickMyDream"
+                android:text="الكـل"/>
+
+            <TextView
+                android:id="@+id/mydream_all_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pickedColorOne"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include android:id="@+id/mProgress"
+        layout="@layout/progress_layout"
+        android:visibility="visible"/>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

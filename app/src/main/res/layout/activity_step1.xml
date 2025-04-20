@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/grey"
+    tools:context=".Step1Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/header"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/aldrich"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Veuillez sélectionner un type :"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_order_type1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:onClick="clickCard"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                tools:ignore="UsingOnClickInXml">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Plastique"
+                            android:textStyle="bold"
+                            android:textSize="23dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <RadioButton
+                            android:id="@+id/radio_btn_type1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="clickCard"
+                            android:buttonTint="@color/pickedColorTwo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_arrow_left"
+                            android:text="PET - PEHD - PHD - PV"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_arrow_left"
+                            android:text="PP - POLYSTYRENE - HDPE - PVC"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_order_type2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickCard"
+                android:padding="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Métaux"
+                            android:textStyle="bold"
+                            android:textSize="23dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <RadioButton
+                            android:id="@+id/radio_btn_type2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="clickCard"
+                            android:buttonTint="@color/pickedColorTwo"
+                            android:checked="false"
+                            tools:ignore="UsingOnClickInXml" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_arrow_left"
+                            android:text="ALUMINIUM - FER - CUIVRE - CHROME"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_arrow_left"
+                            android:text="ZINC - PLOMB - PLATINE - ARGENT - L'OR" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_order_type3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickCard"
+                android:padding="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="BOIS"
+                            android:textStyle="bold"
+                            android:textSize="23dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <RadioButton
+                            android:id="@+id/radio_btn_type3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="clickCard"
+                            android:buttonTint="@color/pickedColorTwo"
+                            android:checked="false"
+                            tools:ignore="UsingOnClickInXml" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_arrow_left"
+                            android:text="BOIS BRUT - BOIS TRAITE"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_order_type4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickCard"
+        android:padding="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="6dp"
+        android:clickable="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ORGANIQUES"
+                    android:textStyle="bold"
+                    android:textSize="23dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+                <RadioButton
+                    android:id="@+id/radio_btn_type4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="clickCard"
+                    android:buttonTint="@color/pickedColorTwo"
+                    android:checked="false"
+                    tools:ignore="UsingOnClickInXml" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_order_type5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickCard"
+                android:padding="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PAPIER"
+                            android:textStyle="bold"
+                            android:textSize="23dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <RadioButton
+                            android:id="@+id/radio_btn_type5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="clickCard"
+                            android:buttonTint="@color/pickedColorTwo"
+                            android:checked="false"
+                            tools:ignore="UsingOnClickInXml" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <Button
+                android:id="@+id/btn_step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="suivant"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_shape_design"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

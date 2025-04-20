@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "907714707327",
+    "firebase_url": "https://wasteexpress-52293-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "wasteexpress-52293",
+    "storage_bucket": "wasteexpress-52293.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907714707327:android:5c7d4d810efc9e5d0ae44a",
+        "android_client_info": {
+          "package_name": "com.f08.wasteexpress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOcx14xI3WDJvzLNOjWmWDcjodG9ZB_I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

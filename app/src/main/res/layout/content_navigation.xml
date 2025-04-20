@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_navigation">
+
+<LinearLayout
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:background="@drawable/layout_design">
+
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_back" />
+
+
+        <LinearLayout
+            android:id="@+id/btnClearTrashFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="100dp"
+            android:minWidth="@dimen/dimen_0"
+            android:visibility="gone"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/filter_trash_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:drawablePadding="10dp"
+                android:background="@drawable/text_design_active"
+                android:drawableRight="@drawable/ic_unchked_circle"
+                android:gravity="center"
+                android:text="Filter Applied" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/btnTrashFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_filter" />
+
+        <TextView
+            android:id="@+id/btnAddP"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_add_1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/aldrich"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:text="AJOUTER" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <!--android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm"-->
+
+        <EditText
+            android:id="@+id/edt_trash_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+
+            android:maxLines="1"
+            android:singleLine="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/horizontal_dashboard"
+
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="@dimen/horizontal_dashboard"
+
+            android:background="@drawable/container_search"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+
+
+
+            android:drawablePadding="@dimen/drawable_left"
+
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingTop="@dimen/vertical_search"
+            android:paddingRight="@dimen/normalPadding"
+            android:paddingBottom="@dimen/vertical_search"
+
+            android:hint="Search Here"
+            android:textColorHint="@color/frutorial_title"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:textSize="14sp">
+
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/layout_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CustomCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginRight="5dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:cardBackgroundColor="@color/grey"
+                app:contentPaddingBottom="1dp"
+                app:contentPaddingLeft="5dp"
+                app:contentPaddingRight="5dp"
+                app:contentPaddingTop="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--  <include layout="@layout/header"/>-->
+                        <TextView
+                            android:id="@+id/tv_no_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:text="AUCUNE DONNÉE TROUVÉE !" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mRec"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/pickedColorOne"
+        app:itemBackground="@drawable/ripple_bottom_navigation"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/purple_like_icon"
+        app:itemActiveIndicatorStyle="@color/pickedColorTwo"
+        app:menu="@menu/bottom_navigation"/>
+</LinearLayout>
+
+    <include android:id="@+id/mProgress" layout="@layout/progress_layout" android:visibility="gone"/>
+
+</FrameLayout>

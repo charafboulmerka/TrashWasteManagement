@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+style="@style/loginParent"
+tools:context="com.f08.wasteexpress.LoginActivity">
+
+    <ScrollView
+    style="@style/parent">
+    <RelativeLayout
+        style="@style/parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/parent"
+                android:background="@drawable/login_shape_bk"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/ic_login_bk"
+                    android:contentDescription="login background" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_signup_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+
+
+            <include android:id="@+id/login_layout_included"  layout="@layout/layout_login"/>
+            <include android:visibility="gone" android:id="@+id/register_layout_included" layout="@layout/layout_register"/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+    <ImageView
+        style="@style/headerText"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="654dp"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/logo"
+        android:text="@string/app_name" />
+
+    <include
+        android:id="@+id/mProgress"
+        layout="@layout/progress_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+

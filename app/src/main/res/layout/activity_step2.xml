@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    tools:context=".Step2Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/header"/>
+            <TextView
+                android:id="@+id/trash_buying_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prix d'achat d'aujourd'hui : 10 DA / KG"
+                android:textSize="17dp"
+                android:fontFamily="@font/aldrich"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_margin="10dp"/>
+
+                <EditText
+                    android:id="@+id/trash_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_margin="10dp"
+                    android:hint="Titre"
+                    android:padding="10dp"
+                    android:background="@drawable/design_edt"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:background="@drawable/login_shape_bk"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="الرجاء كتابة حلمك بشكل دقيق و مفصل :"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/ic_arrow_left"
+                        android:text="وقت الحلم و حالتك الدينية؟"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/ic_arrow_left"
+                        android:text="هل يوجد حمل او في إنتظار حمل ؟ و هل هناك ارق و هموم قبل النوم؟"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/ic_arrow_left"
+                        android:text="هل قمت بترقية شرعية من قبل ؟ و هل كان الحلم بعد إستخارة و ماهي؟"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:drawableRight="@drawable/ic_arrow_left"
+                        android:text="كتابة بيانات الاشخاص المتواجدين بالحلم. الاسم والوظيفة وصلة القرابة"/>
+
+                </LinearLayout>
+
+
+
+                <EditText
+                    android:id="@+id/trash_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="90dp"
+                    android:layout_margin="10dp"
+                    android:hint="Description"
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:background="@drawable/design_edt"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/trash_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/design_edt"
+                    android:hint="Quantité"
+                    android:inputType="numberDecimal"
+                    android:minHeight="50dp"
+                    android:padding="10dp" />
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/trash_quantity_unite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:background="@color/pickedColorOne"
+                    android:gravity="center"
+                    android:minWidth="110dp"
+                    android:padding="13dp"
+                    android:textColor="@color/white"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="@color/grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_item_array="@array/unites"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/pickedColorTwo"
+                    app:spinner_popup_elevation="14dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/trash_selling_amount_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="Prix de vente : "
+                android:textSize="17dp"
+                android:fontFamily="@font/aldrich"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Veuillez sélectionner la région :"
+                    android:textSize="17dp"
+                    android:layout_margin="5dp"/>
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/sp_sub_wilayas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pickedColorOne"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:minWidth="350dp"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold"
+                    app:spinner_item_array="@array/wilayas"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="@color/grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/pickedColorTwo"
+                    app:spinner_popup_elevation="14dp" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/trash_main_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Veuillez sélectionner le sous-type"
+                        android:textSize="17dp"
+                        android:layout_margin="5dp"/>
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/sp_sub_types"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/pickedColorOne"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:minWidth="350dp"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold"
+                        app:spinner_arrow_gravity="end"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_divider_color="@color/grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_popup_animation="dropdown"
+                        app:spinner_popup_background="@color/pickedColorTwo"
+                        app:spinner_popup_elevation="14dp" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/BtnDeleteImages"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textSize="17dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_trash"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:id="@+id/tv_selectedImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:visibility="gone"
+                    android:layout_margin="5dp"/>
+                <Button
+                    android:id="@+id/btn_addImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ajouter des images"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/imagepicker_blue"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valider"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_shape_design"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_loading"
+        layout="@layout/loading_screen"
+        android:visibility="gone" />
+</RelativeLayout>

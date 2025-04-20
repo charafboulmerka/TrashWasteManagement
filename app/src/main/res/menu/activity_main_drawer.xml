@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_login"
+            android:title="Connexion" />
+
+
+        <item
+            android:id="@+id/nav_my_offers"
+            android:icon="@drawable/ic_offers"
+            android:title="Mes offers" />
+
+        <item
+            android:id="@+id/nav_favories"
+            android:icon="@drawable/ic_fav"
+            android:title="Favories" />
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_contact"
+            android:title="Contactez-nous" />
+
+        <item
+            android:id="@+id/nav_share_app"
+            android:icon="@drawable/ic_share"
+            android:title="Partager l'application" />
+
+        <item
+            android:id="@+id/nav_admin"
+            android:visible="false"
+            android:icon="@drawable/ic_admin"
+            android:title="Panneau d'administration" />
+    </group>
+</menu>
